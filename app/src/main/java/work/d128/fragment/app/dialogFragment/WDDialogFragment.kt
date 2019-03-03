@@ -30,6 +30,11 @@ open class WDDialogFragment: DialogFragment() {
         }
     }
 
+    override fun onCancel(dialog: DialogInterface?) {
+        super.onCancel(dialog)
+        setResult(RESULT_CANCELED)
+    }
+
     override fun onDismiss(dialog: DialogInterface?) {
         super.onDismiss(dialog)
 
